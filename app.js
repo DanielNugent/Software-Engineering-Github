@@ -1,5 +1,5 @@
 const GITHUB_URL = "https://api.github.com";
-const GITHUB_API_KEY = "0dba98b873cf7ef8db5cc62ccc0e5e6249b212b2";
+const GITHUB_API_KEY = "YOUR API KEY HERE!!!";
 const page = document.querySelector(".page");
 const info = document.querySelector(".page-information");
 const profilePicture = document.querySelector(".profile-image");
