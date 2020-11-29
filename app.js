@@ -13,7 +13,7 @@ const getCurrentUser = fetch(`${GITHUB_URL}/user`, {
 
 const displayPage = (showPage = true, message = null) => {
   if (showPage) {
-    page.style.display = "block";s
+    page.style.display = "block";
     info.style.display = "none";
   } else {
     page.style.display = "none";
