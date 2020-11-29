@@ -1,13 +1,17 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 2rem;
-    margin: 1rem;
 }
 
 .profile-image {
     border-radius: 100px;
     margin: 10px;
     width: 120px;
+}
+
+.page {
+    margin: -10px;
+    padding: 0;
 }
 
 .page-information {
@@ -24,6 +28,10 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: grey;
+    text-align: center;
 }
 
 a {
@@ -32,4 +40,42 @@ a {
 
 a:hover {
     color: red;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stat-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .stats {
+        flex-direction: column;
+    }
+}
+
+.stat-group img {
+    width: 150px;
+}
+
+#work-picture {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+#repos-picture {
+    width: 135px;
+    margin-bottom: 15px;
+}
+
+.stat-group h5 {
+    margin-top: -5px;
 }

@@ -1,10 +1,13 @@
 const GITHUB_URL = "https://api.github.com";
-const GITHUB_API_KEY = "0724e866f496485a4d85da9f88e3d744260a8af5";
+const GITHUB_API_KEY = "0dba98b873cf7ef8db5cc62ccc0e5e6249b212b2";
 const page = document.querySelector(".page");
 const info = document.querySelector(".page-information");
 const profilePicture = document.querySelector(".profile-image");
 const profileName = document.querySelector(".profile-name");
 const profileGithubLink = document.querySelector(".github-link");
+const followers = document.querySelector("#followers");
+const repos = document.querySelector("#repos");
+const work = document.querySelector("#work");
 const getCurrentUser = fetch(`${GITHUB_URL}/user`, {
   headers: {
     Authorization: `Bearer ${GITHUB_API_KEY}`,
@@ -25,9 +28,18 @@ const setUser = (user) => {
   const avatar = user.avatar_url;
   const name = user.name;
   const githubLink = user.html_url;
+  const nFollowers = user.followers;
+  const nRepos = (user.public_repos + user.owned_private_repos);
+  const hireable = user.hireable;
   profilePicture.src = avatar;
   profileName.innerText = name;
   profileGithubLink.href = githubLink;
+  followers.innerText = nFollowers + " followers";
+  repos.innerText = nRepos + " repos";
+  if(hireable){
+     work.innerText = "Available to work";
+  }
+  else work.innerText = "Currently employed";
   console.log(user);
 };
 
