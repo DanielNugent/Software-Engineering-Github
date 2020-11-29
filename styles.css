@@ -1,0 +1,35 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.profile-image {
+    border-radius: 100px;
+    margin: 10px;
+    width: 120px;
+}
+
+.page-information {
+    left: 0;
+    line-height: 200px;
+    margin-top: -150px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
