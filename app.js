@@ -267,28 +267,3 @@ const createChart = (data, n) => {
     polyline.exit().remove();
   }
 };
-/*
-  let keys = [];
-  for ([key, value] of Object.entries(data)) {
-    keys.push[key];
-  }
-  var color = d3.scale
-    .ordinal()
-    .domain(keys)
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b"]);
-
-  function formatData(data = {}) {
-    let total = 0;
-    for (let [key, value] of Object.entries(data)) {
-      total+=value;
-    }
-    let arr = [];
-    for (let [key, value] of Object.entries(data)) {
-      let obj = { label: key, value: value/total };
-      arr.push(obj);
-    }
-    console.log(arr);
-    return arr;
-  }
-
-  change(formatData(data));*/
